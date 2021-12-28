@@ -31,7 +31,7 @@ public class ContinuousCaptureActivity extends Activity {
     private BarcodeCallback callback = new BarcodeCallback() {
         @Override
         public void barcodeResult(BarcodeResult result) {
-            if(result.getText() == null || result.getText().equals(lastText)) {
+            if (result.getText() == null || result.getText().equals(lastText)) {
                 // Prevent duplicate scans
                 return;
             }

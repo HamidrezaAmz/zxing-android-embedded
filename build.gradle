@@ -15,10 +15,8 @@ subprojects {
         mavenLocal()
         mavenCentral()
     }
+}
 
-    version = '4.3.0'
-    group = 'com.journeyapps'
-
-    ext.androidTargetSdk = 30
-    ext.zxingCore = 'com.google.zxing:core:3.4.1'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

@@ -45,8 +45,6 @@ public class BarcodeEncoder {
     public BitMatrix encode(String contents, BarcodeFormat format, int width, int height) throws WriterException {
         try {
             return new MultiFormatWriter().encode(contents, format, width, height);
-        } catch (WriterException e) {
-            throw e;
         } catch (Exception e) {
             // ZXing sometimes throws an IllegalArgumentException
             throw new WriterException(e);
@@ -56,8 +54,6 @@ public class BarcodeEncoder {
     public BitMatrix encode(String contents, BarcodeFormat format, int width, int height, Map<EncodeHintType, ?> hints) throws WriterException {
         try {
             return new MultiFormatWriter().encode(contents, format, width, height, hints);
-        } catch (WriterException e) {
-            throw e;
         } catch (Exception e) {
             throw new WriterException(e);
         }
